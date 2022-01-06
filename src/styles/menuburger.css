@@ -1,0 +1,88 @@
+.menu{
+    width: 35px;
+    height: 35px;
+    border: 1px solid white;
+    position: relative;
+    transition: all 05 ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.menu .burger{
+    display: block;
+    width: 25px;
+    background: white;
+    height: 2px;
+    position: absolute;
+    transition: all 0.5s ease-in-out;
+}
+.menu .burger::before,
+.menu .burger::after{
+    display: block;
+    content: "";
+    width: 25px;
+    background: white;
+    height: 2px;
+    position: absolute;
+    transition: all 0.5s ease-in-out;
+}
+.menu .burger::before{
+    transform: translateY(-10px);
+}
+.menu .burger::after{
+    transform: translateY(10px);
+}
+.cliqued{
+    width: 35px;
+    height: 35px;
+    border: 1px solid white;
+    position: relative;
+    transition: all 05 ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.cliqued .burger{
+    display: block;
+    width: 25px;
+    background: white;
+    height: 2px;
+    position: absolute;
+    transition: all 0.5s ease-in-out;
+
+}
+.cliqued .burger::before,
+.cliqued .burger::after{
+    display: block;
+    content: "";
+    width: 25px;
+    background: white;
+    height: 2px;
+    position: absolute;
+    transition: all 0.5s ease-in-out;
+}
+.cliqued .burger::before{
+    transform: translateY(-10px);
+}
+.cliqued .burger::after{
+    transform: translateY(10px);
+}
+.cliqued .burger{
+    transform: translateX(-20px);
+    background: transparent;
+}
+.cliqued .burger::before{
+    transform:rotate(45deg) translate(15px,-15px)
+}
+.cliqued .burger::after{
+    transform:rotate(-45deg) translate(15px,15px)
+}
+
+@media screen and (min-width: 570px) {
+    .menu {
+      display: none;
+    }
+  }
+

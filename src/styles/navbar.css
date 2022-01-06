@@ -1,0 +1,147 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.navbar{
+    background-color: #161719;
+    display: flex;
+    border-bottom: 2px solid #474a4d;
+    align-items: center;
+    justify-content: space-between;
+}
+.navbar .logo{
+    display: flex;
+    list-style: none;
+    color: #f2f2f2f2;
+    align-items: center;
+    text-decoration: none;
+}
+.navbar .logo svg{
+    margin-left: 0.5rem;
+}
+.navbar ul{
+    display: flex;
+    align-items: center;
+
+}
+.navbar ul .links{
+    list-style-type: none;
+    text-decoration: none;
+    color: #f2f2f2;
+    margin-right: 1.5rem;
+}
+.navbar ul .links svg{
+    margin-right: 0.5rem;
+    margin-left: 0.5rem;
+}
+.navbar .navbar__menu{
+    visibility: hidden;
+}
+.navbar .navbar__menu{
+    width: 35px;
+    height: 35px;
+    border: 1px solid white;
+    position: relative;
+    transition: all 05 ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+
+}
+.navbar .navbar__menu .burger-bar{
+    display: block;
+    width: 25px;
+    background: white;
+    height: 3px;
+    position: absolute;
+    transition: all 0.5s ease-in-out;
+
+}
+.navbar .navbar__menu .burger-bar::before,
+.navbar .navbar__menu .burger-bar::after{
+    display: block;
+    content: "";
+    width: 25px;
+    background: white;
+    height: 2px;
+    position: absolute;
+    transition: all 0.5s ease-in-out;
+
+}
+.navbar .navbar__menu .burger-bar::before{
+    transform: translateY(-10px);
+
+}
+.navbar .navbar__menu .burger-bar::after{
+    transform: translateY(10px);
+
+}
+
+
+
+/* Animation au click du bouton */
+.show-nav .navbar__menu .burger-bar{
+    transform: translateX(-20px);
+    background: transparent;
+}
+.show-nav .navbar__menu .burger-bar::before{
+    transform:rotate(45deg) translate(15px,-15px);
+
+
+}
+.show-nav .navbar__menu .burger-bar::after{
+    transform:rotate(-45deg) translate(15px,15px)
+
+}
+
+
+
+/* Mobile */
+@media screen and (max-width: 570px) {
+    .navbar{
+        position: relative;
+    }
+    .navbar .navbar__menu{
+        visibility: visible;
+    }
+    .navbar ul{
+        position: absolute;
+        flex-direction: column;
+        right: -0.1rem;
+        top: 51px;
+        background-color: #161719;
+        height: 70vh;
+        width: 45vh;
+        padding-right: 1.5rem;
+        transition: all 0.8 ease-in-out;
+
+
+    }
+    .navbar ul .links::after{
+        content: "";
+        max-width: 18px;
+        margin-left: 3.3rem;
+        height: 2px;
+        background: white;
+        display: block;
+        align-items: center;
+    }
+    /* Style au click */
+    .show-nav ul{
+        visibility: visible;  
+      }
+    .navbar ul .links{
+        margin: 1rem;
+        transition: all 0.8 ease-in-out;
+
+    }
+    .navbar ul .links svg{
+        margin-right: 0.8rem;
+        transition: all 0.8 ease-in-out;
+
+   }
+    
+    
+  }
