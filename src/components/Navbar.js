@@ -14,12 +14,14 @@ export default function Navbar() {
         <Icons.FaMicroscope />
       </Link>
       <ul onClick={() => setOpen(false)}>
-        {navItems.map((items) => (
-          <Link to={items.path} className="links">
-            {items.icone}
-            {items.title}
-          </Link>
-        ))}
+        {navItems.map((items) => {
+          return (
+            <Link to={items.path} className="links">
+              {items.icone}
+              {items.title}
+            </Link>
+          );
+        })}
       </ul>
       <butt className="navbar__menu" onClick={() => setOpen(!open)}>
         <span className="burger-bar"></span>
