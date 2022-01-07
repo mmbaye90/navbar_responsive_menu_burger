@@ -1,4 +1,4 @@
-body{
+*{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -23,7 +23,6 @@ body{
 .navbar ul{
     display: flex;
     align-items: center;
-
 }
 .navbar ul .links{
     list-style-type: none;
@@ -44,6 +43,7 @@ body{
     border: 1px solid white;
     position: relative;
     transition: all 05 ease-in-out;
+    margin-right: 1rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -109,17 +109,20 @@ body{
     .navbar ul{
         position: absolute;
         flex-direction: column;
-        right: -0.1rem;
-        top: 51px;
         background-color: #161719;
-        height: 70vh;
-        width: 45vh;
-        padding-right: 1.5rem;
-        transition: all 0.8 ease-in-out;
-
-
+        height: 75vh;
+        width: 95vh;
+        right: 0;
+        transition: all 0.5s ease-in-out;
+        transform: translateY(-110px);
     }
-    .navbar ul .links::after{
+    /* Style au click */
+    .show-nav ul{
+        transition: all 0.5s ease-in-out;
+        transform: translateY(125px); 
+      }
+      /*fin style au click*/
+      .navbar ul .links::after{
         content: "";
         max-width: 18px;
         margin-left: 3.3rem;
@@ -128,10 +131,7 @@ body{
         display: block;
         align-items: center;
     }
-    /* Style au click */
-    .show-nav ul{
-        visibility: visible;  
-      }
+
     .navbar ul .links{
         margin: 1rem;
         transition: all 0.8 ease-in-out;
@@ -139,7 +139,6 @@ body{
     }
     .navbar ul .links svg{
         margin-right: 0.8rem;
-        transition: all 0.8 ease-in-out;
 
    }
     
