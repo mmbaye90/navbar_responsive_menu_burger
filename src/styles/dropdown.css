@@ -27,3 +27,25 @@
     color: black;
 
 }
+
+
+
+@media screen and (max-width: 570px) {
+    .container{
+        border-radius: 2px;
+        position: absolute;
+        width: -7rem;
+        top: -11rem;
+
+    }
+    
+    .cont-dropdown .cont-link{
+        width: 50%;
+    
+    }
+    .cont-dropdown .submenu-item{
+        color: white;
+    
+    }
+          
+}
