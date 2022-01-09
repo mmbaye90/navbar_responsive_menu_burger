@@ -1,0 +1,14 @@
+.cont-dropdown{
+    background-color: aquamarine;
+    display: flex;
+    flex-direction: column;
+}
+
+.cont-dropdown .submenu-item{
+    display: block;
+    text-decoration: none;
+    border: 1px solid black;
+    /* display: block;
+    display: flex;
+    flex-direction: column; */
+}

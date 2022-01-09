@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { navItems } from "../datas/datas.js";
 import "../styles/navbar.css";
 import * as Icons from "react-icons/fa";
+import Dropdown from "./Dropdown.js";
 // import MenuBurger from "./MenuBurger.js";
 
 export default function Navbar() {
@@ -13,9 +14,21 @@ export default function Navbar() {
         <h1>LOGO</h1>
         <Icons.FaMicroscope />
       </Link>
-      <ul onClick={() => setOpen(false)}>
+      <ul>
         {navItems.map((items) => {
-          return (
+          return items.title === "Services" ? (
+            <li
+              className="sous-lien"
+              onMouseOver={() => setOpen(true)}
+              onMouseLeave={() => setOpen(false)}
+            >
+              <Link to={items.path} className="links">
+                {items.icone}
+                {items.title}
+              </Link>
+              {open && <Dropdown />}
+            </li>
+          ) : (
             <Link to={items.path} className="links">
               {items.icone}
               {items.title}
@@ -27,6 +40,7 @@ export default function Navbar() {
         <span className="burger-bar"></span>
       </butt>
     </nav>
+
     // <MenuBurger />
   );
 }
