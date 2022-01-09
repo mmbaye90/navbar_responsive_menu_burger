@@ -26,7 +26,11 @@ export default function Navbar() {
                 {items.icone}
                 {items.title}
               </Link>
-              {open && <Dropdown />}
+              {open && (
+                <div className="container">
+                  <Dropdown />
+                </div>
+              )}
             </li>
           ) : (
             <Link to={items.path} className="links">

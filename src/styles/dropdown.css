@@ -1,14 +1,29 @@
-.cont-dropdown{
+.container{
+    height: 8.5rem;
+    border-radius: 2px;
     background-color: aquamarine;
+}
+.cont-dropdown{
     display: flex;
     flex-direction: column;
-}
 
-.cont-dropdown .submenu-item{
+}
+.cont-dropdown .cont-link{
+    list-style-type: none;
+    padding: 0.5rem;
+    text-align: center;
     display: block;
-    text-decoration: none;
+    width: 100%;
+
+}
+.cont-dropdown .cont-link:hover{
     border: 1px solid black;
-    /* display: block;
-    display: flex;
-    flex-direction: column; */
+    background-color: aqua;
+    border-radius: 4px;
+
+}
+.cont-dropdown .submenu-item{
+    text-decoration: none;
+    color: black;
+
 }
